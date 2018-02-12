@@ -71,6 +71,8 @@
 %     pdfkeywords    = {\@firstname{}~\@lastname{}, curriculum vit\ae{}, resum\'{e}}}}
 % }}
 
+\newcommand{\techno}{\texttt}
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -81,7 +83,25 @@
 
 \section{Professional Experience}
 %\subsection{Vocational}
-\cventry{From May 2012}{Software Engineer}{Takahashi Giken}{Tokyo}{}{%
+
+% TODO: Check the dates
+\cventry{From April 2016}{Software Engineer}{Z-Works}{Tokyo}{}{%
+\begin{itemize}%
+% \setlength\itemsep{1em}
+% ZIO
+\item Developed the backend of an IoT system for elder care.
+    \begin{itemize}%
+        \item Responsibilities:
+            \begin{itemize}%
+                \item Development of several \techno{Erlang} programs to manage IoT devices;
+                \item Creation of a communication API using \techno{AMQP};
+            \end{itemize}
+        \item Technologies used: \techno{AMQP}, \techno{Z-Wave}, \techno{Erlang}, \techno{Java}
+    \end{itemize}
+\end{itemize}
+}
+
+\cventry{May 2012--March 2016}{Software Engineer}{Takahashi Giken}{Tokyo}{}{%
 \begin{itemize}%
 \setlength\itemsep{1em}
 % LPUS
@@ -93,7 +113,7 @@
                 \item Managed a 2 member team;
                 \item Internationalize the front-end (Japanese / English);
             \end{itemize}
-        \item Technologies used: \texttt{Go}, \texttt{WebSocket}, \texttt{PostgreSQL}, \texttt{JavaScript}, \texttt{jQuery}, \texttt{L20n};
+        \item Technologies used: \techno{Go}, \techno{WebSocket}, \techno{PostgreSQL}, \techno{JavaScript}, \techno{jQuery}, \techno{L20n};
     \end{itemize}
 % WARV-2
 \item Worked on the configuration interface for a \emph{WiMAX} gateway system.
@@ -101,22 +121,22 @@
         \item Responsibilities:
             \begin{itemize}%
                 % TODO: to what?
-                \item{Creation of \texttt{XSLT} stylesheets to translate an \texttt{XML} configuration file to;}
-                \item{Development of a \emph{Net-SNMP} \texttt{Perl} module;}
-                \item{Development of monitoring daemons in \texttt{Go};}
+                \item{Creation of \techno{XSLT} stylesheets to translate an \techno{XML} configuration file to;}
+                \item{Development of a \emph{Net-SNMP} \techno{Perl} module;}
+                \item{Development of monitoring daemons in \techno{Go};}
             \end{itemize}
-        \item Technologies used: \texttt{Go}, \texttt{Perl}, \texttt{XSLT}, \texttt{Bash}, \texttt{PostgreSQL}
+        \item Technologies used: \techno{Go}, \techno{Perl}, \techno{XSLT}, \techno{Bash}, \techno{PostgreSQL}
 \end{itemize}
 % E2E
 \item Developed a \emph{LTE-A} (4G) network tester, along with several modules for specific network protocols.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                \item Development of network protocol modules used for network testing (\texttt{HTTP}, \texttt{FTP}, \texttt{ICMP}, \texttt{SIP}, \texttt{RTP});
+                \item Development of network protocol modules used for network testing (\techno{HTTP}, \techno{FTP}, \techno{ICMP}, \techno{SIP}, \techno{RTP});
             \end{itemize}
-        \item Technologies used: \texttt{C++}
+        \item Technologies used: \techno{C++}
     \end{itemize}
-    % AMP
+% AMP
 \item Created an automated system for attendance management using \emph{FeliCa} tags.
     \begin{itemize}%
         \item Responsibilities:
@@ -126,29 +146,29 @@
                 \item Development of a web interface allowing timetable viewing and administration;
                 \item Internationalize the front-end (Japanese / English / French);
             \end{itemize}
-        \item Technologies used: \texttt{NFC}, \texttt{Python}, \texttt{PostgreSQL}, \texttt{JavaScript}, \texttt{jQuery}, \texttt{Babel}
+        \item Technologies used: \techno{NFC}, \techno{Python}, \techno{PostgreSQL}, \techno{JavaScript}, \techno{jQuery}, \techno{Babel}
     \end{itemize}
-    % 10G
+% 10G
 \item Developed a traffic analysis tool and configuration interface for 10G networks.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                \item Development of several \texttt{Bash} script to manage Linux configuration files;
-                \item Creation of a communication API using \texttt{PHP} and \texttt{JavaScript};
+                \item Development of several \techno{Bash} script to manage Linux configuration files;
+                \item Creation of a communication API using \techno{PHP} and \techno{JavaScript};
                 \item Communication with software engineer from partner company;
             \end{itemize}
-        \item Technologies used: \texttt{PHP}, \texttt{Smarty}, \texttt{MySQL}, \texttt{Bash}, \texttt{JavaScript}, \texttt{jQuery}
+        \item Technologies used: \techno{PHP}, \techno{Smarty}, \techno{MySQL}, \techno{Bash}, \techno{JavaScript}, \techno{jQuery}
     \end{itemize}
 \item Technical environment (general):
-\begin{itemize}%
-\item \texttt{CentOS}, \texttt{Ubuntu}, \texttt{Raspbian}, \texttt{Git}, \texttt{Mercurial}, \texttt{Jenkins}, \texttt{Redmine}.
-\end{itemize}
+    \begin{itemize}%
+        \item \techno{CentOS}, \techno{Ubuntu}, \techno{Raspbian}, \techno{Git}, \techno{Mercurial}, \techno{Jenkins}, \techno{Redmine}.
+    \end{itemize}
 \end{itemize}
 }
 
 \cventry{2010 (April--June)}{Internship}{CEA Valduc}{}{}{Automated the testing process of an internal web application using \emph{Selenium}.\newline{}% % chktex 8
 \begin{itemize}%
-  \item Technologies: \texttt{RHEL}, \texttt{PHP}, \texttt{JavaScript}, \texttt{Selenium}
+  \item Technologies: \techno{RHEL}, \techno{PHP}, \techno{JavaScript}, \techno{Selenium}
 \end{itemize}}
 
 
@@ -165,19 +185,19 @@
 
 \section{Computer skills}
 \subsection{Programming Languages}
-\cvitem{General}{\texttt{C}, \texttt{C++}, \texttt{Java}, \texttt{Bash}}
-\cvitem{Server Side}{\textbf{\texttt{Go}}, \texttt{Python}, \textbf{\texttt{Ruby}}, \texttt{Perl}, \texttt{Node.js}}
-\cvitem{Client Side}{\texttt{JavaScript}, \texttt{jQuery}, \texttt{HTML5}, \texttt{CSS3}}
-\cvitem{Functional}{\texttt{Erlang}, \texttt{Haskell}.}
+\cvitem{General}{\techno{C}, \techno{C++}, \techno{Java}, \techno{Bash}}
+\cvitem{Server Side}{\textbf{\techno{Go}}, \techno{Python}, \textbf{\techno{Ruby}}, \techno{Perl}, \techno{Node.js}}
+\cvitem{Client Side}{\techno{JavaScript}, \techno{jQuery}, \techno{HTML5}, \techno{CSS3}}
+\cvitem{Functional}{\techno{Erlang}, \techno{Haskell}.}
 \subsection{Technologies}
-\cvitem{Operating Systems}{\texttt{RHEL}, \texttt{CentOS}, \texttt{Debian}, \texttt{Ubuntu}, \texttt{ArchLinux}, \texttt{Windows}, \texttt{OS X}}
-\cvitem{Database}{\texttt{MySQL}, \texttt{PostgreSQL}}
-\cvitem{Frameworks}{\texttt{RoR}, \texttt{Hadoop}}
-\cvitem{Mobile}{\texttt{Android}}
-%\cvitem{Markup}{\texttt{LaTeX}, \texttt{Markdown}}
-\cvitem{Testing}{\texttt{Rspec}, \texttt{JUnit}, \texttt{PHPUnit}, \texttt{Python unittest}, \texttt{Test::More}, \texttt{Selenium}}
-\cvitem{Project Management}{\texttt{Redmine}, \texttt{Jenkins}}
-\cvitem{Version Control}{\texttt{Git}, \texttt{Mercurial}, \texttt{Subversion}}
+\cvitem{Operating Systems}{\techno{RHEL}, \techno{CentOS}, \techno{Debian}, \techno{Ubuntu}, \techno{ArchLinux}, \techno{Windows}, \techno{OS X}}
+\cvitem{Database}{\techno{MySQL}, \techno{PostgreSQL}}
+\cvitem{Frameworks}{\techno{RoR}, \techno{Hadoop}}
+\cvitem{Mobile}{\techno{Android}}
+%\cvitem{Markup}{\techno{LaTeX}, \techno{Markdown}}
+\cvitem{Testing}{\techno{Rspec}, \techno{JUnit}, \techno{PHPUnit}, \techno{Python unittest}, \techno{Test::More}, \techno{Selenium}}
+\cvitem{Project Management}{\techno{Redmine}, \techno{Jenkins}}
+\cvitem{Version Control}{\techno{Git}, \techno{Mercurial}, \techno{Subversion}}
 
 \clearpage
 
