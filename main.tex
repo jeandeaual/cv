@@ -1,18 +1,29 @@
 % !TEX program = lualatex
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
 
-% moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% moderncv theme
+% Style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}
+% Color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey'
+% and 'black'
+\moderncvcolor{black}
+% To set the default font; use '\sfdefault' for the default sans serif font,
+% '\rmdefault' for the default roman one, or any tex font name
+%\renewcommand{\familydefault}{\sfdefault}
+% Uncomment to suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{}
 
-% adjust the page margins
+% Adjust the page margins
 \usepackage[scale=0.8]{geometry}
 \usepackage{microtype}
-\setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% If you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{2.5cm}
+% For the 'classic' style, if you want to force the width allocated to
+% your name and avoid line breaks.
+% Be careful though, the length is normally calculated to avoid any overlap
+% with your personal info; use this at your own typographical risks...
+%\setlength{\makecvtitlenamewidth}{10cm}
 
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -40,25 +51,25 @@
 % "awesome" is the default in the "banking", "casual" and "classic" styles
 \moderncvicons{awesome}
 
-% personal data
+% Personal data
 \name{Alexis}{Jeandeau}
-\title{Resumé}          % optional, remove / comment the line if not wanted
-\address{2--3--43 Kamitakada, Nakano-ku}{164--0002 Tokyo}{Japan} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+81--90--6791--5920} % optional, remove / comment the line if not wanted
-% \phone[fixed]{+81~3~6314~8776}      % optional, remove / comment the line if not wanted
-\email{alexis.jeandeau@gmail.com}   % optional, remove / comment the line if not wanted
-\photo[64pt][0.2pt]{photo.jpg}      % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% Optional
+\title{Resumé}
+% Optional
+% The "postcode city" and "country" arguments can be omitted or provided empty
+\address{2--3--43 Kamitakada, Nakano-ku}{164--0002 Tokyo}{Japan}
+% Optional
+\phone[mobile]{+81--90--6791--5920}
+% Optional
+\email{alexis.jeandeau@gmail.com}
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+\ifdefined\withphoto%
+    % optional
+    % '64pt' is the height the picture must be resized to,
+    % 0.4pt is the thickness of the frame around it (put it to 0pt for no frame)
+    % and 'picture' is the name of the picture file
+    \photo[64pt][0.2pt]{photo.jpg}
+\fi
 
 % \AfterPreamble{\hypersetup{
 %     pdfcreator     = {\LaTeX{} with 'moderncv' package},
@@ -71,32 +82,44 @@
 %     pdfkeywords    = {\@firstname{}~\@lastname{}, curriculum vit\ae{}, resum\'{e}}}}
 % }}
 
-\newcommand{\techno}{\texttt}
+% Technologies / protocols
+\newcommand{\techno}{\emph}
+% Languages / libraries
+\newcommand{\lang}{\emph}
 
-%----------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %            content
-%----------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+
 \makecvtitle%
 
 \section{Professional Experience}
 %\subsection{Vocational}
 
-% TODO: Check the dates
 \cventry{From April 2016}{Software Engineer}{Z-Works}{Tokyo}{}{%
 \begin{itemize}%
-% \setlength\itemsep{1em}
+\setlength\itemsep{1em}
 % ZIO
-\item Developed the backend of an IoT system for elder care.
+\item Developed the backend of an IoT system for the elder care market.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                \item Development of several \techno{Erlang} programs to manage IoT devices;
+                \item Development of several \lang{Erlang} programs to manage IoT devices;
                 \item Creation of a communication API using \techno{AMQP};
+                \item Managed a 3 member team;
             \end{itemize}
-        \item Technologies used: \techno{AMQP}, \techno{Z-Wave}, \techno{Erlang}, \techno{Java}
+        \item Technologies used: \techno{AMQP}, \techno{Z-Wave}, \techno{\href{http://www.linear.com/products/smartmesh_ip}{Dust Networks SmartMesh IP}}, \techno{PostgreSQL}, \lang{Erlang}, \lang{Java}
+    \end{itemize}
+% ZMC
+\item Designed and developed a management interface for the backend system.
+    \begin{itemize}%
+        \item Responsibilities:
+            \begin{itemize}%
+                \item Creation of a REST API using \href{https://aws.amazon.com/api-gateway/}{Amazon API Gateway} and \href{https://aws.amazon.com/lambda/}{AWS Lambda};
+            \end{itemize}
+        \item Technologies used: \techno{HTTP}, \lang{Java}
     \end{itemize}
 \end{itemize}
 }
@@ -109,35 +132,36 @@
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                \item Overall design of the back-end application and \emph{REST API};
+                \item Overall design of the back-end application and REST API;\@
                 \item Managed a 2 member team;
-                \item Internationalize the front-end (Japanese / English);
+                \item Front-end internationalization (Japanese / English);
             \end{itemize}
-        \item Technologies used: \techno{Go}, \techno{WebSocket}, \techno{PostgreSQL}, \techno{JavaScript}, \techno{jQuery}, \techno{L20n};
+        \item Technologies used: \lang{Go}, \lang{JavaScript}, \techno{WebSocket}, \techno{PostgreSQL}, \techno{jQuery}, \techno{L20n};
     \end{itemize}
+\ifdefined\detailed%
 % WARV-2
-\item Worked on the configuration interface for a \emph{WiMAX} gateway system.
+\item Worked on the configuration interface for a \techno{WiMAX} gateway system.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                % TODO: to what?
-                \item{Creation of \techno{XSLT} stylesheets to translate an \techno{XML} configuration file to;}
-                \item{Development of a \emph{Net-SNMP} \techno{Perl} module;}
-                \item{Development of monitoring daemons in \techno{Go};}
+                \item{Creation of \lang{XSLT} stylesheets to translate \lang{XML} configuration files to system configuration files;}
+                \item{Development of a \techno{Net-SNMP} \lang{Perl} module;}
+                \item{Development of monitoring daemons in \lang{Go};}
             \end{itemize}
-        \item Technologies used: \techno{Go}, \techno{Perl}, \techno{XSLT}, \techno{Bash}, \techno{PostgreSQL}
-\end{itemize}
+        \item Technologies used: \lang{Go}, \lang{Perl}, \lang{XSLT}, \lang{Bash}, \techno{PostgreSQL}
+    \end{itemize}
+\fi
 % E2E
-\item Developed a \emph{LTE-A} (4G) network tester, along with several modules for specific network protocols.
+\item Developed a \techno{LTE-A} (4G) network tester, along with several modules for specific network protocols.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
                 \item Development of network protocol modules used for network testing (\techno{HTTP}, \techno{FTP}, \techno{ICMP}, \techno{SIP}, \techno{RTP});
             \end{itemize}
-        \item Technologies used: \techno{C++}
+        \item Technologies used: \lang{C++}
     \end{itemize}
 % AMP
-\item Created an automated system for attendance management using \emph{FeliCa} tags.
+\item Created an automated system for attendance management using \techno{FeliCa} tags.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
@@ -146,19 +170,21 @@
                 \item Development of a web interface allowing timetable viewing and administration;
                 \item Internationalize the front-end (Japanese / English / French);
             \end{itemize}
-        \item Technologies used: \techno{NFC}, \techno{Python}, \techno{PostgreSQL}, \techno{JavaScript}, \techno{jQuery}, \techno{Babel}
+        \item Technologies used: \techno{NFC}, \techno{PostgreSQL}, \techno{jQuery}, \techno{Babel}, \lang{JavaScript}, \lang{Python}
     \end{itemize}
+\ifdefined\detailed%
 % 10G
 \item Developed a traffic analysis tool and configuration interface for 10G networks.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                \item Development of several \techno{Bash} script to manage Linux configuration files;
-                \item Creation of a communication API using \techno{PHP} and \techno{JavaScript};
+                \item Development of several \lang{Bash} script to manage Linux configuration files;
+                \item Creation of a communication API using \lang{PHP} and \lang{JavaScript};
                 \item Communication with software engineer from partner company;
             \end{itemize}
-        \item Technologies used: \techno{PHP}, \techno{Smarty}, \techno{MySQL}, \techno{Bash}, \techno{JavaScript}, \techno{jQuery}
+        \item Technologies used: \lang{PHP}, \lang{Bash}, \lang{JavaScript}, \techno{MySQL}, \techno{jQuery}
     \end{itemize}
+\fi
 \item Technical environment (general):
     \begin{itemize}%
         \item \techno{CentOS}, \techno{Ubuntu}, \techno{Raspbian}, \techno{Git}, \techno{Mercurial}, \techno{Jenkins}, \techno{Redmine}.
@@ -166,10 +192,12 @@
 \end{itemize}
 }
 
-\cventry{2010 (April--June)}{Internship}{CEA Valduc}{}{}{Automated the testing process of an internal web application using \emph{Selenium}.\newline{}% % chktex 8
+\ifdefined\detailed%
+\cventry{2010 (April--June)}{Internship}{CEA Valduc}{}{}{Automated the testing process of an internal web application using \techno{Selenium}.\newline{}% % chktex 8
 \begin{itemize}%
-  \item Technologies: \techno{RHEL}, \techno{PHP}, \techno{JavaScript}, \techno{Selenium}
+  \item Technologies: \techno{RHEL}, \lang{PHP}, \lang{JavaScript}, \techno{Selenium}
 \end{itemize}}
+\fi
 
 
 \section{Education}
@@ -178,6 +206,10 @@
 %\cventry{2005--2008}{Baccalauréat STG}{Lycée Le Castel}{Dijon}{\textit{Mention bien}}{}
 \cventry{2005--2008}{Baccalauréat STG}{Lycée Le Castel}{Dijon}{}{French high-school diploma.}
 
+\ifdefined\detailed\else
+\clearpage
+\fi
+
 \section{Languages}
 \cvitemwithcomment{French}{Native}{}
 \cvitemwithcomment{English}{Business}{}
@@ -185,56 +217,32 @@
 
 \section{Computer skills}
 \subsection{Programming Languages}
-\cvitem{General}{\techno{C}, \techno{C++}, \techno{Java}, \techno{Bash}}
-\cvitem{Server Side}{\textbf{\techno{Go}}, \techno{Python}, \textbf{\techno{Ruby}}, \techno{Perl}, \techno{Node.js}}
-\cvitem{Client Side}{\techno{JavaScript}, \techno{jQuery}, \techno{HTML5}, \techno{CSS3}}
-\cvitem{Functional}{\techno{Erlang}, \techno{Haskell}.}
+\cvitem{General}{\lang{C}, \lang{C++}, \lang{Java}}
+\cvitem{Server Side}{\lang{Go}, \lang{Python}, \lang{Ruby}, \lang{Perl}, \lang{Node.js}, \lang{Erlang}}
+\cvitem{Client Side}{\lang{JavaScript}, \lang{jQuery}, \lang{HTML5}}
 \subsection{Technologies}
-\cvitem{Operating Systems}{\techno{RHEL}, \techno{CentOS}, \techno{Debian}, \techno{Ubuntu}, \techno{ArchLinux}, \techno{Windows}, \techno{OS X}}
-\cvitem{Database}{\techno{MySQL}, \techno{PostgreSQL}}
-\cvitem{Frameworks}{\techno{RoR}, \techno{Hadoop}}
+\cvitem{Operating Systems}{\techno{RHEL}, \techno{CentOS}, \techno{Debian}, \techno{Ubuntu}, \techno{Windows}}
+\cvitem{Database}{\techno{PostgreSQL}, \techno{MySQL}}
+% \cvitem{Frameworks}{\techno{RoR}, \techno{Hadoop}}
 \cvitem{Mobile}{\techno{Android}}
-%\cvitem{Markup}{\techno{LaTeX}, \techno{Markdown}}
-\cvitem{Testing}{\techno{Rspec}, \techno{JUnit}, \techno{PHPUnit}, \techno{Python unittest}, \techno{Test::More}, \techno{Selenium}}
+\cvitem{Testing}{\techno{JUnit}, \techno{PHPUnit}, \techno{Rspec}, \techno{Python unittest}, \techno{Test::More}, \techno{Selenium}}
 \cvitem{Project Management}{\techno{Redmine}, \techno{Jenkins}}
 \cvitem{Version Control}{\techno{Git}, \techno{Mercurial}, \techno{Subversion}}
 
-\clearpage
 
 \section{Interests}
 %\cvitem{Traveling}{Several trips to Japan, USA, Europe, etc.}
 \cvitem{Computer Science}{Reading about and learning new technologies.}
 \cvitem{General}{Listening to music, watching movies, etc.}
-%\cvitem{hobby 2}{Description}
-%\cvitem{hobby 3}{Description}
 
 \section{Miscellaneous}
 \cvlistitem{French and Japanese driving licence}
 
-\iffalse%
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize} (more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
-\fi
+% \section{References}
+% \begin{cvcolumns}
+%   \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize} (more upon request)}
+%   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+% \end{cvcolumns}
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
