@@ -104,17 +104,24 @@
 \cventry{From April 2016}{Software Engineer}{Z-Works}{Tokyo}{}{%
 \begin{itemize}%
 \setlength\itemsep{1em}
-% ZIO / ZMC
+% ZIO
 \item Developed the backend of an IoT system for the elder care market.
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
-                \item Development of several \lang{Erlang} programs to manage IoT devices;
-                \item Creation of a communication API using \techno{AMQP};
-                \item Creation of a REST API using \href{https://aws.amazon.com/api-gateway/}{Amazon API Gateway} and \href{https://aws.amazon.com/lambda/}{AWS Lambda};
-                \item Managed a 3 member team;
+                \item Managed the backend development team (3 members);
+                \item Development a microservice infrastructure in \lang{Erlang} and \lang{Java} to manage IoT devices and end users;
+                \item Creation of a communication API using \techno{AMQP} and \techno{RabbitMQ};
             \end{itemize}
         \item Technologies used: \techno{AMQP}, \techno{Z-Wave}, \techno{\href{http://www.linear.com/products/smartmesh_ip}{Dust Networks SmartMesh IP}}, \techno{PostgreSQL}, \lang{Erlang}, \lang{Java}
+    \end{itemize}
+\item Developed an administration interface aimed at support engineers.
+    \begin{itemize}%
+        \item Responsibilities:
+            \begin{itemize}%
+                \item Creation of a REST API using Amazon services;
+            \end{itemize}
+        \item Technologies used: \lang{Java}, \href{https://aws.amazon.com/api-gateway/}{Amazon API Gateway}, \href{https://aws.amazon.com/lambda/}{AWS Lambda};
     \end{itemize}
 \end{itemize}
 }
@@ -123,7 +130,7 @@
 \begin{itemize}%
 \setlength\itemsep{1em}
 % LPUS
-\item Created a back-end service to allow real-time photo viewing and management during an event (sports, wedding, etc.).
+\item Created a back-end service to allow real-time photo viewing and management during events (sports, wedding, etc.).
     \begin{itemize}%
         \item Responsibilities:
             \begin{itemize}%
@@ -210,23 +217,27 @@
 \cvitemwithcomment{English}{Business}{}
 \cvitemwithcomment{Japanese}{Business}{JLPT N2 obtained in 2013}
 
+% TODO: Différencier entre les niveaux de compétences (ex: expert en gras, proficient en normal)
 \section{Computer skills}
 \subsection{Programming Languages}
 \cvitem{General}{\lang{C}, \lang{C++}, \lang{Java}}
-\cvitem{Server Side}{\lang{Go}, \lang{Python}, \lang{Ruby}, \lang{Perl}, \lang{Node.js}, \lang{Erlang}}
+\cvitem{Server Side}{\lang{Ruby}, \lang{Python}, \lang{Go}, \lang{Perl}, \lang{Node.js}, \lang{Erlang}}
 \cvitem{Client Side}{\lang{JavaScript}, \lang{jQuery}, \lang{HTML5}}
 \subsection{Technologies}
 \cvitem{Operating Systems}{\techno{RHEL}, \techno{CentOS}, \techno{Debian}, \techno{Ubuntu}, \techno{Windows}}
-\cvitem{Database}{\techno{PostgreSQL}, \techno{MySQL}}
+% TODO: Parler un peu d'Amazon
+\cvitem{Networks}{\techno{AMQP}, \techno{MQTT}, \techno{XMPP}}
+\cvitem{Database}{\techno{PostgreSQL}, \techno{MySQL}, \techno{Redis}, \techno{MongoDB}}
 % \cvitem{Frameworks}{\techno{RoR}, \techno{Hadoop}}
 \cvitem{Mobile}{\techno{Android}}
-\cvitem{Testing}{\techno{JUnit}, \techno{PHPUnit}, \techno{Rspec}, \techno{Python unittest}, \techno{Test::More}, \techno{Selenium}}
+\cvitem{Testing}{\techno{JUnit}, \techno{PHPUnit}, \techno{Rspec}, \techno{Python unittest}, \techno{Selenium}}
 \cvitem{Project Management}{\techno{Redmine}, \techno{Jenkins}}
 \cvitem{Version Control}{\techno{Git}, \techno{Mercurial}, \techno{Subversion}}
 
 
 \section{Interests}
 %\cvitem{Traveling}{Several trips to Japan, USA, Europe, etc.}
+% TODO: Parler de la trad ?
 \cvitem{Computer Science}{Reading about and learning new technologies.}
 \cvitem{General}{Listening to music, watching movies, etc.}
 
