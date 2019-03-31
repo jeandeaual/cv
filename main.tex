@@ -66,6 +66,22 @@
 % Optional
 \email{alexis.jeandeau@gmail.com}
 \ifdefined\withsocial%
+\newcommand*{\httpslink}[2][]{%
+  \ifthenelse{\equal{#1}{}}%
+    {\href{https://#2}{#2}}%
+    {\href{https://#2}{#1}}}
+
+% adds a social link to one's personal information (optional)
+% usage: \social[<optional type>][<optional url>]{<account name>}
+% where <optional type> should be either "linkedin" or "github"
+\RenewDocumentCommand{\social}{O{}O{}m}{% <=============================
+  \ifthenelse{\equal{#2}{}}%
+    {%
+      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httpslink[#3]{www.linkedin.com/in/#3}}}{}%
+      \ifthenelse{\equal{#1}{github}}{\collectionadd[github]{socials}{\protect\httpslink[#3]{github.com/#3}}}     {}%
+    }
+    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
+
 \social[github]{jeandeaual}
 \social[linkedin]{alexis-jeandeau}
 \fi
