@@ -25,27 +25,16 @@
 % with your personal info; use this at your own typographical risks...
 %\setlength{\makecvtitlenamewidth}{10cm}
 
-\usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
-\ifnum0\ifxetex1\fi\ifluatex1\fi=0 % if pdftex
-    \usepackage[T1]{fontenc}
-    \usepackage[utf8]{inputenc}
-\else % if luatex or xelatex
-    \ifxetex%
-        \usepackage{mathspec}
-    \else
-        \usepackage{fontspec}
-    \fi
-    \setmainfont[
-        Ligatures=TeX,
-        Scale=MatchLowercase,
-        BoldFont=SourceSansPro-Semibold.otf,
-        ItalicFont=SourceSansPro-LightIt.otf,
-        BoldItalicFont=SourceSansPro-SemiboldIt.otf]{SourceSansPro-Light.otf}
-    \usepackage{polyglossia}
-    \setdefaultlanguage{english}
-    \setotherlanguage{french}
-\fi
+\usepackage{fontspec}
+\setmainfont[
+    Ligatures=TeX,
+    Scale=MatchLowercase,
+    BoldFont=SourceSansPro-Semibold.otf,
+    ItalicFont=SourceSansPro-LightIt.otf,
+    BoldItalicFont=SourceSansPro-SemiboldIt.otf]{SourceSansPro-Light.otf}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{french}
 
 % Default for the "classic" style: marvosym
 % "awesome" is the default in the "banking", "casual" and "classic" styles
