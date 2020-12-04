@@ -46,10 +46,10 @@
 % Personal data
 \name{Alexis}{Jeandeau}
 % Optional
-\title{Resumé}
+\title{Résumé}
 % Optional
 % The "postcode city" and "country" arguments can be omitted or provided empty
-\address{2--3--43 Kamitakada, Nakano-ku}{164--0002 Tokyo}{Japan}
+\address{Heights Nihonbash Nakasu 307, 6--10 Nihonbashi Nakasu, Chūō-ku}{103--0008 Tokyo}{Japan}
 % Optional
 \phone[mobile]{+81--90--6791--5920}
 % Optional
@@ -83,16 +83,17 @@
     \photo[64pt][0.2pt]{photo.jpg}
 \fi
 
-% \AfterPreamble{\hypersetup{
-%     pdfcreator     = {\LaTeX{} with 'moderncv' package},
-%     pdfproducer    = {\LaTeX{}}, % will/should be set automatically to the correct TeX engine used
-%     bookmarksopen  = true,
-%     bookmarksdepth = 2, % to show sections and subsections
-%     pdfauthor      = {\@firstname{}~\@lastname{}},
-%     pdftitle       = {\@firstname{}~\@lastname{}\notblank{\@title}{ -- \@title}{}},
-%     pdfsubject     = {Resum\'{e} of \@firstname{}~\@lastname{}},
-%     pdfkeywords    = {\@firstname{}~\@lastname{}, curriculum vit\ae{}, resum\'{e}}}}
-% }}
+\AfterPreamble{\hypersetup{
+    % pdfcreator     = {\LaTeX{} with 'moderncv' package},
+    pdfcreator     = {\LaTeX{}},
+    % pdfproducer    = {\LaTeX{}}, % will/should be set automatically to the correct TeX engine used
+    % bookmarksopen  = true,
+    % bookmarksdepth = 2, % to show sections and subsections
+    pdfauthor      = {Alexis~Jeandeau},
+    pdftitle       = {Alexis~Jeandeau -- Résumé},
+    pdfsubject     = {Résumé of Alexis~Jeandeau},
+    pdfkeywords    = {Alexis~Jeandeau, cv, resume, Go, Erlang, Java, C++}
+}}
 
 % Technologies / protocols
 \providecommand{\techno}{}
@@ -112,7 +113,24 @@
 \section{Professional Experience}
 %\subsection{Vocational}
 
-\cventry{From April 2016}{Software Engineer}{Z-Works}{Tokyo}{}{%
+\cventry{From September 2019}{Web Engineer}{Tier IV}{Tokyo}{}{%
+\begin{itemize}%
+\setlength\itemsep{1em}
+\item Developed the data platform of an autonomous vehicle fleet management system
+    \begin{itemize}%
+        \item Responsibilities:
+            \begin{itemize}%
+                \item Worked on the messaging between a cloud management system and the vehicles
+                \item Worked on a fleet management and OTA update system for autonomous vehicles
+            \end{itemize}
+        \item Technologies used: \techno{\href{https://aws.amazon.com/iot/}{AWS IoT}}, \techno{MQTT}, \techno{Python}, \techno{C++}
+    \end{itemize}
+\end{itemize}
+}
+
+\vspace*{2em}
+
+\cventry{April 2016--August 2019}{Software Engineer}{Z-Works}{Tokyo}{}{%
 \begin{itemize}%
 \setlength\itemsep{1em}
 % ZIO
