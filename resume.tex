@@ -18,12 +18,7 @@
 %\setlength{\makecvtitlenamewidth}{10cm}
 
 \usepackage{fontspec}
-\setmainfont[
-    Ligatures=TeX,
-    Scale=MatchLowercase,
-    BoldFont=SourceSansPro-Semibold.otf,
-    ItalicFont=SourceSansPro-LightIt.otf,
-    BoldItalicFont=SourceSansPro-SemiboldIt.otf]{SourceSansPro-Light.otf}
+\usepackage{libertinus}
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguage{french}
@@ -41,7 +36,7 @@
 \title{Résumé}
 % Optional
 % The "postcode city" and "country" arguments can be omitted or provided empty
-\address{Heights Nihonbashi Nakasu 307, 6--10 Nihonbashi Nakasu, Chūō-ku}{103--0008 Tokyo}{Japan}
+\address{Heights Nihonbashi Nakasu 307\makenewline{}6--10 Nihonbashi Nakasu, Chūō-ku}{103--0008 Tokyo}{Japan}
 % Optional
 \phone[mobile]{+81--90--6791--5920}
 % Optional
@@ -119,7 +114,7 @@
 
 \vspace*{2em}
 
-\cventry{April 2016--August 2019}{Software Engineer}{Z-Works}{Tokyo}{}{%
+\cventry{April 2016 --\newline{}August 2019}{Software Engineer}{Z-Works}{Tokyo}{}{%
 \begin{itemize}%
 \setlength\itemsep{1em}
 % ZIO
@@ -155,7 +150,7 @@
 
 \vspace*{2em}
 
-\cventry{May 2012--April 2016}{Software Engineer}{Takahashi Giken}{Tokyo}{}{%
+\cventry{May 2012 --\newline{}April 2016}{Software Engineer}{Takahashi Giken}{Tokyo}{}{%
 \begin{itemize}%
 \setlength\itemsep{1em}
 % LPUS
@@ -224,7 +219,7 @@
 }
 
 \ifdefined\detailed%
-\cventry{2010 (April--June)}{Internship}{CEA Valduc}{}{}{Automated the testing process of an internal web application using \techno{Selenium}.\newline{}% chktex 8
+\cventry{2010 (April -- June)}{Internship}{CEA Valduc}{}{}{Automated the testing process of an internal web application using \techno{Selenium}.\newline{}% chktex 8
 \begin{itemize}%
   \item Technologies: \techno{RHEL}, \lang{PHP}, \lang{JavaScript}, \techno{Selenium}
 \end{itemize}}
@@ -233,9 +228,9 @@
 \clearpage
 
 \section{Education}
-\cventry{2011--2012}{Yoshida Institute of Japanese Language}{Shinjuku}{Tokyo}{}{Japanese language course.}
-\cventry{2008--2010}{DUT Informatique}{Burgundy University}{Dijon}{}{2 years technical degree in computer science and software engineering.}
-\cventry{2005--2008}{Baccalauréat STG}{Lycée Le Castel}{Dijon}{}{French high-school diploma.}
+\cventry{2011 -- 2012}{Yoshida Institute of Japanese Language}{Shinjuku}{Tokyo}{}{Japanese language course.}
+\cventry{2008 -- 2010}{DUT Informatique}{Burgundy University}{Dijon}{}{2 years technical degree in computer science and software engineering.}
+\cventry{2005 -- 2008}{Baccalauréat STG}{Lycée Le Castel}{Dijon}{}{French high-school diploma.}
 
 \section{Languages}
 \cvitemwithcomment{French}{Native}{}
@@ -253,7 +248,7 @@
 % \cvitem{Mobile}{\techno{Android}, \techno{Kotlin}}
 \cvitem{Messaging Protocols}{\techno{MQTT}, \techno{AMQP}, \techno{XMPP}}
 % \cvitem{Testing}{\techno{JUnit}, \techno{PHPUnit}, \techno{Rspec}, \techno{Python unittest}, \techno{Selenium}}
-\cvitem{Project Management}{\techno{Jira}, \techno{Redmine}}
+\cvitem{Project Management}{\techno{GitHub}, \techno{Jira}, \techno{Redmine}}
 \cvitem{CI/CD}{\techno{GitHub Actions}, \techno{Bitbucket Pipelines}, \techno{AWS CodeDeploy}, \techno{Jenkins}}
 \cvitem{Version Control}{\techno{Git}, \techno{Mercurial}, \techno{Subversion}}
 
