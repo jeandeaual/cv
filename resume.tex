@@ -54,7 +54,8 @@
 \phone[mobile]{+81--90--6791--5920}
 % Optional
 \email{alexis.jeandeau@gmail.com}
-\ifdefined\withsocial%
+
+% Social links
 \newcommand*{\httpslink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
     {\href{https://#2}{#2}}%
@@ -63,7 +64,7 @@
 % adds a social link to one's personal information (optional)
 % usage: \social[<optional type>][<optional url>]{<account name>}
 % where <optional type> should be either "linkedin" or "github"
-\RenewDocumentCommand{\social}{O{}O{}m}{% <=============================
+\RenewDocumentCommand{\social}{O{}O{}m}{%
   \ifthenelse{\equal{#2}{}}%
     {%
       \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httpslink[#3]{www.linkedin.com/in/#3}}}{}%
@@ -73,7 +74,6 @@
 
 \social[github]{jeandeaual}
 \social[linkedin]{alexis-jeandeau}
-\fi
 
 \ifdefined\withphoto%
     % optional
