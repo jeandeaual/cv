@@ -42,7 +42,7 @@
 \email{alexis.jeandeau@gmail.com}
 
 % Social links
-\newcommand*{\httpslink}[2][]{%
+\renewcommand*{\httpslink}[2][]{%
   \ifthenelse{\equal{#1}{}}%
     {\href{https://#2}{#2}}%
     {\href{https://#2}{#1}}}
@@ -96,7 +96,23 @@
 \section{Professional Experience}
 %\subsection{Vocational}
 
-\cventry{From September 2019}{Web Engineer}{Tier IV}{Tokyo}{}{%
+\cventry{From March 2021}{Software Engineer}{Nonpi}{Tokyo}{}{%
+\begin{itemize}%
+\setlength\itemsep{1em}
+\item Developed a food delivery system for companies
+    \begin{itemize}%
+        \item Responsibilities:
+            \begin{itemize}%
+                \item Full-stack development
+            \end{itemize}
+        \item Technologies used: \techno{Go}, \techno{React}, \techno{MySQL}, \techno{Docker}
+    \end{itemize}
+\end{itemize}
+}
+
+\vspace*{2em}
+
+\cventry{September 2019 --\newline{}February 2021}{Web Engineer}{Tier IV}{Tokyo}{}{%
 \begin{itemize}%
 \setlength\itemsep{1em}
 \item Developed the data platform of an autonomous vehicle fleet management system
