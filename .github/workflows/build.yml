@@ -3,9 +3,19 @@ on:
   pull_request:
     branches:
       - master
+    paths:
+      - '**.tex'
+      - '**.jpg'
+      - '.latexmkrc'
+      - '.github/workflows/build.yml'
   push:
     branches:
       - master
+    paths:
+      - '**.tex'
+      - '**.jpg'
+      - '.latexmkrc'
+      - '.github/workflows/build.yml'
   workflow_dispatch:
     inputs: {}
 jobs:
